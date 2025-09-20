@@ -1,0 +1,84 @@
+//beginning of array 
+import java.util.Scanner;
+
+class InsertAtBeginning {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter array size: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n + 1];
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i + 1] = sc.nextInt(); 
+        }
+
+        System.out.print("Enter value to insert at beginning: ");
+        int val = sc.nextInt();
+        sc.close();
+
+        arr[0] = val;
+
+        for (int i = 0; i <= n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+//given index of array
+import java.util.Scanner;
+
+class InsertAtIndex {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter array size: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n + 1];
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.print("Enter index to insert: ");
+        int index = sc.nextInt();
+        System.out.print("Enter value to insert: ");
+        int val = sc.nextInt();
+        sc.close();
+
+        for (int i = n; i > index; i--) {
+            arr[i] = arr[i - 1]; 
+        }
+        arr[index] = val;
+
+        for (int i = 0; i <= n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+
+//end of array
+import java.util.Scanner;
+
+class InsertAtEnd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter array size: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n + 1];
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.print("Enter value to insert at end: ");
+        int val = sc.nextInt();
+        sc.close();
+
+        arr[n] = val; 
+
+        for (int i = 0; i <= n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
