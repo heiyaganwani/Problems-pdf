@@ -1,0 +1,9 @@
+class Solution{
+public int evenMul(int[]nums){
+int product =1;
+for(int i=0;i<nums.length;i+=2){
+product *=nums[i];
+}
+return product;
+}
+}
