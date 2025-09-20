@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class McCarthy91 {
+    static int M(int n) {
+        if (n > 100) {
+            return n - 10;
+        } else {
+            return M(M(n + 11));
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter n: ");
+        int n = sc.nextInt();
+        sc.close();
+
+        int result = M(n);
+        System.out.println("McCarthy 91 function result: " + result);
+    }
+}
