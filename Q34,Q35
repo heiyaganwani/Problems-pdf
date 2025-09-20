@@ -1,0 +1,45 @@
+//head recursion 
+import java.util.Scanner;
+
+class HeadRecursionSum {
+    static int sum(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        int s = sum(n - 1); 
+        return s + n;        
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter n: ");
+        int n = sc.nextInt();
+        sc.close();
+
+        int result = sum(n);
+        System.out.println("Sum of first " + n + " numbers: " + result);
+    }
+}
+//tail recursion
+import java.util.Scanner;
+
+class TailRecursionSum {
+    
+    static int sum(int n, int acc) {
+        if (n == 0) {
+            return acc; 
+        }
+        return sum(n - 1, acc + n);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter n: ");
+        int n = sc.nextInt();
+        sc.close();
+
+        int result = sum(n, 0); 
+        System.out.println("Sum of first " + n + " numbers: " + result);
+    }
+}
+
